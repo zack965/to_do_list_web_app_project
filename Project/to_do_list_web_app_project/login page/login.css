@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    /*background-color: rgb(0, 89, 255);*/
+    background-image: url("../home/images/mp.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.countainer{
+    margin: 20px;
+    /*background-color: rgb(82, 82, 82);*/
+    background-color: none;
+    
+    width: 40%;
+    margin-left: 30%;
+}
+.countainer form h1{
+    color: #c8d6e5;
+    margin-left: 50px;
+    padding-top: 30px;
+    opacity: 0.6;
+}
+.countainer form{
+    margin: 40px;
+}
+
+.countainer input:first-of-type{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    outline: none;
+    background: none;
+    color: white;
+    border:none;
+    border-bottom: 2px solid rgb(71, 71, 71);
+}
+
+.countainer input:first-of-type:hover{
+    border-bottom: 2px solid white;
+}
+.countainer input:first-of-type:focus{
+    border-bottom: 2px solid white;
+}
+
+.countainer  input{
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 360px;
+    outline: none;
+    margin-left: 50px;
+    background: none;
+    color: white;
+    border:none;
+    border-bottom: 2px solid rgb(71, 71, 71);
+}
+.countainer input:hover{
+    border-bottom: 2px solid white;
+}
+.countainer input:focus{
+    border-bottom: 2px solid white;
+}
+.countainer .buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+
+
+}
+.countainer .buttons input:first-of-type{
+    margin-bottom: 30px;
+    padding: 5px;
+    outline: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: #576574;
+    opacity: 0.6;
+    color: white;
+    border: none;
+    font-size: 30px;
+    border-radius: 15px;
+}
+.countainer .buttons button:first-of-type{
+    margin-left: 50px;
+    margin-right: 15px;
+    background-color: #10ac84;
+    opacity: 0.6;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    height: 55px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    height: 70px;
+    width: 150px;
+}
+.countainer .buttons button:last-of-type{
+    border-radius: 30px;
+    margin-right: 60px;
+    margin-left: 15px;
+    background-color: #ee5253;
+    opacity: 0.6;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    height: 70px;
+    margin-bottom: 20px;
+    width: 170px;
+}
+
+.countainer form #erreur {
+    color: red;
+    margin-left: 50px;
+}
+/*
+focus
+
+*/

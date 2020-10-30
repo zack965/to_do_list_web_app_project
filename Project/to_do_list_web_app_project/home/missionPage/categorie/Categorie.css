@@ -1,0 +1,538 @@
+*{
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+/*
+catcc
+*/
+.xcard{   
+    
+    /*
+    overflow: scroll;
+    width: 700px;
+    height: 700px;
+    margin-left: 150px;
+    height: auto;
+    */
+    background-color: aqua;
+    text-align: center;
+    border-left: 1px solid red;
+    margin: 10px;
+}
+header{
+    background-color: #222f3e;
+    width: 100%;
+    height: 63px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+header nav{
+    height: 50px;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    float: left;
+    color: rgb(99, 99, 99);
+    margin: 20px ;
+    margin-top: 0px;
+    padding: 20px;
+    font-size: 20px;
+}
+header nav ul li:hover{
+    text-decoration: underline;
+    background-color: rgb(189, 202, 202);
+    text-decoration-color: black;
+    color: rgb(119, 0, 223);
+    border-radius: 30px;
+}
+header .logo i{
+    font-size: 40px;
+    margin-left: 80px;
+    margin-top: 10px;
+    float: left;
+    color: black;
+    margin-right: 30px;
+}
+header .logo h1{
+    color: white;
+    margin-top: 13px;
+    color: black;
+}
+.countainer{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.countainer .missions{
+    background-color: gold;
+}
+.countainer .missions .mission-cards{
+    background-color: darkcyan;
+    height: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+/*
+.countainer .missions .mission-cards h1{
+  width: 100%;
+  background-color: aqua;
+}
+*/
+.countainer .missions .mission-cards .catcc{
+    background-color: rgb(192, 192, 192);
+    margin: 10px;
+}
+.countainer .missions .CrudButtonsMissions{
+    background-color: darkgray ;
+}
+
+.countainer .missions .CrudButtonsMissions #AddCategorie{
+    background-color: red ;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+}
+.countainer .missions .CrudButtonsMissions #DeleteCategorie{
+    background-color: rgb(57, 0, 163) ;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    width: 120px;
+}
+.countainer .missions .CrudButtonsMissions #ModifyCategory{
+    background-color: #9b0e88 ;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    width: 200px;
+}
+.countainer .missions .CrudButtonsMissions .CategorieForm{
+    display: none;
+}
+.countainer .CrudButtonsCategorie{
+    background-color: rgb(255, 94, 0);
+}
+.countainer .CrudButtonsCategorie #AddCategorie{
+    background-color: rgb(179, 255, 0);
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+}
+#missionCrudForm{
+    display: none; /* Hidden by default */
+    position: fixed;   
+    z-index: 1;  
+    left: 0;
+    top: 0;
+    margin-left: 25%;
+    width: 50%; 
+    height:60%;
+    background-color: rgb(0, 255, 153); /* Fallback color */
+    opacity: .9;
+    /*background-color: rgba(0,0,0,0.4);  */
+    padding-top: 60px;
+    border-radius: 30px;
+}
+#missionCrudForm label{
+  margin-left: 20px;
+}
+#missionCrudForm input[type=number] {
+  width: 95%;
+  padding: 12px 20px;
+  margin-left: 2%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#missionCrudForm input[type=date]{
+  width: 400px;
+  height: 30px;
+}
+
+/* Set a style for all buttons */
+#missionCrudForm input[type=submit]{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 0px;
+  
+  cursor: pointer;
+  width: 95%;
+  margin-left: 2%;
+}
+#missionCrudForm input[type=button]{
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 0px;
+  border: none;
+  cursor: pointer;
+  width: 95%;
+  margin-left: 2%;
+
+}
+/*
+  margin: 0% 10%;
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+margin-left: 10%;
+  margin-right: 10%;
+#formMissionCountainer{
+    background-color: rgb(105, 99, 99);
+    width: 50%;
+    margin-left: 25%;
+    
+}
+
+position: fixed;  Stay in place 
+z-index: 1;  Sit on top 
+left: 0;
+top: 0;
+width: 100%; Full width 
+height: 100%;  Full height 
+overflow: auto;  Enable scroll if needed 
+*/
+
+/*Copied*/
+
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=date]{
+    width: 400px;
+    height: 30px;
+}
+
+/* Set a style for all buttons */
+input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/*Copied*/
+
+#Del01{
+    display: none;
+}
+
+#Del01 #DelCat #dele{
+    background-color: #341f97;
+    margin-top: 10px;
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    color: #fefefe;
+    margin-bottom: 20px;
+}
+#Del01 #DelCat #cls{
+    background-color: #e74c3c;
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    color: #fefefe;
+    margin-bottom: 20px;
+}
+
+#Del01 #DelCat #IdDelValue{
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    color: #000000;
+}
+/*modify part button*/
+#ModifyCat01{
+    display: none;
+}
+#clsx{
+    background-color: #e74c3c;
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    color: #fefefe;
+    margin-bottom: 20px;
+}
+#DelMissCat{
+    display: none;
+}
+#DelMiss label{
+    text-align: center;
+    margin-left: 50px;
+}
+#DelCategorie {
+    background-color: #ff0000;
+    width: 350px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 5%;
+    outline: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fefefe;
+    margin-bottom: 20px;
+}
+.err{
+    background-color: #ff0000;
+    color: white;
+    width: 900px;
+    height: 100px;
+    text-align: center;
+    padding-top: 40px;
+    font-style: oblique;
+    font-size: 25px;
+}
+footer{
+    display: grid;
+    /*grid-column-gap: 33% 33% 33%;*/
+    grid-template-columns: auto auto auto ;
+    margin-top: 0px;
+}
+footer .foo1{
+    background-color: #192a56;
+    color: #706fd3;
+    height: 250px;
+}
+footer .foo1 h1{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+footer .foo1 p{
+    text-align: center;
+    font-size: 27px;
+    color: #34ace0;
+}
+footer .foo2{
+    background-color: #192a56;
+    color: #706fd3;
+    height: 250px;
+
+}
+footer .foo2 h1{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+footer .foo2 p{
+    text-align: center;
+    font-size: 27px;
+    color: #34ace0;
+}
+footer .foo2 a:first-of-type i{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #7d5fff;
+    border: 1px solid #7d5fff;
+    border-radius: 30px;
+    font-size: 55px;
+    margin-left: 100px;
+    background-color: #192a56;
+    padding: 10px;
+}
+footer .foo2 a:nth-of-type(2) i{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /*color: #192a56;*/
+    color: #7d5fff;
+    border: 2px solid #7d5fff;
+    background-color: #192a56;
+    border-radius: 30px;
+    font-size: 55px;
+    padding: 10px;
+
+}
+footer .foo2 a:nth-of-type(3) i{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /*color: #192a56;*/
+    color: #7d5fff;
+    border: 2px solid #7d5fff;
+    background-color: #192a56;
+    border-radius: 30px;
+    font-size: 55px;
+    padding: 10px;
+
+}
+footer .foo2 a:nth-of-type(4) i{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #7d5fff;
+    border: 2px solid #7d5fff;
+    background-color: #192a56;
+    border-radius: 30px;
+    font-size: 55px;
+    padding: 10px;
+
+}
+footer .foo3{
+    background-color: #192a56;
+    color: #706fd3;
+    height: 250px;
+
+}
+footer .foo3 h1{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+footer .foo3 p{
+    text-align: center;
+    font-size: 27px;
+    color: #34ace0;
+}
+footer .copyright_part{
+    background-color: #3B3B98;
+    color: #1B9CFC;
+    height: 60px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    width: 100%;
+}
